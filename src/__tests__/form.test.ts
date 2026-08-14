@@ -1,4 +1,4 @@
-import { formSchema } from '../components/IntakeForm';
+import { formSchema } from '../lib/schemas';
 
 describe('IntakeForm Validation', () => {
     it('should validate a correct form submission', () => {
