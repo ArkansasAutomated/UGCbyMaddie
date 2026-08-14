@@ -1,35 +1,4 @@
-import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
-import Providers from "@/components/Providers";
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-    subsets: ["latin"],
-    variable: "--font-jakarta",
-});
-
-export const metadata: Metadata = {
-    title: "UGC by Maddie | Performance-Driven Creative",
-    description: "Transforming brands into TikTok Shop powerhouses through high-aesthetic content that actually converts.",
-};
-
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
-    return (
-        <html lang="en" className="scroll-smooth dark">
-            <body className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased bg-[#0a0a08] text-white selection:bg-[#cb997e]/30`}>
-                <Providers>
-                    {children}
-                </Providers>
-            </body>
-        </html>
-    );
-}
+import type {Metadata} from "next";import {Cormorant_Garamond,Manrope} from "next/font/google";import "./globals.css";
+const serif=Cormorant_Garamond({subsets:["latin"],variable:"--font-serif",weight:["500","600"],display:"swap"});const sans=Manrope({subsets:["latin"],variable:"--font-sans",display:"swap"});
+export const metadata:Metadata={metadataBase:new URL("https://ugcbymaddie.com"),title:"Maddie Brass | Home & Lifestyle UGC Creator",description:"Maddie Brass creates warm, shoppable UGC for home, decor, organization, books, and everyday lifestyle brands.",openGraph:{title:"UGC by Maddie Brass",description:"Made for real life. Styled to stop the scroll.",url:"https://ugcbymaddie.com",siteName:"UGC by Maddie",images:[{url:"/assets/profiles/maddie-main.jpg",width:1080,height:1080,alt:"Maddie Brass"}],type:"website"},twitter:{card:"summary_large_image",title:"UGC by Maddie Brass",description:"Home + everyday lifestyle UGC",images:["/assets/profiles/maddie-main.jpg"]}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body className={`${serif.variable} ${sans.variable}`}>{children}</body></html>}
