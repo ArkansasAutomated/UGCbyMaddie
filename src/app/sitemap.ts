@@ -10,5 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: `${HOST}/social-media-management`,
+      lastModified: new Date("2026-11-14T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 }
